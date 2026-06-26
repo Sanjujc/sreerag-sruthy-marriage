@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Montserrat:wght@200;300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Montserrat:wght@200;300;400;500;600&family=Pinyon+Script&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css?v=2">
 </head>
@@ -51,11 +51,11 @@
     <nav class="navbar">
         <div class="nav-logo fade-up">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="19" stroke="rgba(229, 196, 151, 0.4)" stroke-width="1" />
-                <path d="M12 28 C 12 18, 28 18, 28 28" stroke="rgba(229, 196, 151, 0.3)" stroke-width="1" />
+                <circle cx="20" cy="20" r="19" stroke="rgba(223, 177, 91, 0.45)" stroke-width="1" />
+                <path d="M12 28 C 12 18, 28 18, 28 28" stroke="rgba(223, 177, 91, 0.35)" stroke-width="1" />
                 <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle"
                     font-family="Cormorant Garamond, serif" font-size="15" font-style="normal"
-                    fill="#e5c497">S&amp;R</text>
+                    fill="#dfb15b">S&amp;R</text>
             </svg>
             <div class="nav-logo-text">
                 <span class="nav-logo-names">Sreerag &amp; Reshma</span>
@@ -66,7 +66,6 @@
             <li><a href="#hero" class="magnetic-item">Home</a></li>
             <li><a href="#invitation" class="magnetic-item">Invitation</a></li>
             <li><a href="#events" class="magnetic-item">Ceremonies</a></li>
-            <li><a href="#rsvp" class="magnetic-item">RSVP</a></li>
         </ul>
         <div class="audio-control magnetic-item fade-up" id="audioToggle">
             <!-- Play icon default -->
@@ -86,18 +85,14 @@
     <!-- Hero Greeting Section -->
     <section id="hero" class="hero">
         <div class="hero-content">
-            <!-- Cathedral Monogram Frame -->
-            <div class="arch-hero-frame fade-up">
-                <div class="hero-monogram">S&amp;R</div>
-                <h1 class="hero-names">Sreerag S<br><span class="ampersand">&amp;</span><br>Reshma R</h1>
-                <p style="font-size: 0.8rem; letter-spacing: 3px; text-transform: uppercase; color: var(--text-muted); margin-top: 0.6rem;">(Sruthy)</p>
-            </div>
+            <h1 class="hero-names fade-up">Sreerag S<br><span class="ampersand">&amp;</span><br>Reshma R</h1>
+            <p class="hero-nickname fade-up">(Sruthy)</p>
             
             <p class="hero-tagline fade-up">Two Stars, One Constellation</p>
             
             <div class="scroll-indicator">
                 <div class="arrows">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e5c497" stroke-width="1.5">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#dfb15b" stroke-width="1.5">
                         <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
                 </div>
@@ -105,6 +100,10 @@
             </div>
         </div>
     </section>
+
+    <!-- Scratch Card to Reveal Date (Commented out to hide from viewport, keeping logic intact)
+    <scratch-card></scratch-card>
+    -->
 
     <!-- Countdown Timer Element -->
     <countdown-timer target-date="2026-08-27T10:00:00"></countdown-timer>
@@ -142,7 +141,7 @@
                 <span style="font-family: var(--font-heading); font-style: italic; color: var(--accent-color); font-size: 1.8rem; display: block; margin: 1.5rem 0;">with</span>
 
                 <!-- Groom Name and Info -->
-                <span class="invitation-names">Sreerag S</span>
+                <span class="invitation-names" style="color: var(--accent-color);">Sreerag S</span>
                 <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 3px; display: block; margin: 1.2rem 0 3.5rem 0; line-height: 1.7; font-weight: 400;">
                     Son of Sreekumar K &amp; Sheeja Kumari PR<br>
                     Paramukalil Puthenveedu Kaithodu, Nilamel
@@ -220,17 +219,14 @@
         </div>
     </section>
 
-    <!-- RSVP Custom Web Component -->
-    <rsvp-form></rsvp-form>
-
     <!-- Footer -->
     <footer>
         <p class="fade-up">Celestial. Elegant. Eternal.</p>
     </footer>
 
     <!-- Web Components Script Loading -->
+    <!-- <script src="components/scratchcard.js" defer></script> (Commented out) -->
     <script src="components/countdown.js" defer></script>
-    <script src="components/rsvp.js" defer></script>
     <!-- Main Script Loading -->
     <script src="script.js" defer></script>
 </body>

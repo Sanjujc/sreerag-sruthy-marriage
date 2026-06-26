@@ -14,18 +14,18 @@ class CountdownTimer extends HTMLElement {
                     width: 110px;
                     height: 110px;
                     border-radius: 50%;
-                    border: 1px solid rgba(229, 196, 151, 0.25);
+                    border: 1.5px solid rgba(223, 177, 91, 0.35);
                     background: rgba(10, 15, 30, 0.45);
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
-                    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), inset 0 0 15px rgba(229, 196, 151, 0.03);
+                    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), inset 0 0 15px rgba(223, 177, 91, 0.05);
                     transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
                 }
                 .countdown-ring:hover {
-                    border-color: rgba(229, 196, 151, 0.6);
-                    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(229, 196, 151, 0.2);
+                    border-color: rgba(223, 177, 91, 0.85);
+                    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), 0 0 25px rgba(223, 177, 91, 0.35);
                     transform: scale(1.05);
                 }
                 .countdown-number { 
@@ -33,7 +33,7 @@ class CountdownTimer extends HTMLElement {
                     font-size: 2.2rem; 
                     color: var(--accent-color); 
                     font-weight: 300; 
-                    text-shadow: 0 0 10px rgba(229, 196, 151, 0.3); 
+                    text-shadow: 0 0 12px rgba(223, 177, 91, 0.45); 
                     line-height: 1;
                 }
                 .countdown-label { 

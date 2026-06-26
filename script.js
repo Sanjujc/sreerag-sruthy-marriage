@@ -156,9 +156,9 @@ const unmuteOnInteraction = () => {
         if (audioToggle) audioToggle.innerHTML = pauseIcon;
         let vol = 0;
         const fadeIn = setInterval(() => {
-            vol = Math.min(vol + 0.02, 0.4);
+            vol = Math.min(vol + 0.02, 0.85);
             bgMusic.volume = vol;
-            if (vol >= 0.4) clearInterval(fadeIn);
+            if (vol >= 0.85) clearInterval(fadeIn);
         }, 100);
     }).catch(e => console.log("Autoplay blocked by browser", e));
 
@@ -240,14 +240,15 @@ if (canvas) {
             this.x = Math.random() * width;
             this.y = Math.random() * height;
             this.depth = Math.random(); 
-            this.size = this.depth * 3.5 + 0.5; // Size distribution
+            this.size = this.depth * 4.6 + 1.0; // Larger gold particles
             this.speedY = -(this.depth * 0.35 + 0.08); // Rising drift speed
             this.speedX = (Math.random() - 0.5) * 0.15;
             
-            this.baseOpacity = this.depth * 0.45 + 0.15;
+            this.baseOpacity = this.depth * 0.52 + 0.28; // Brighter gold base
             this.opacity = this.baseOpacity;
             this.pulseSpeed = 0.015 + Math.random() * 0.02;
             this.pulsePhase = Math.random() * Math.PI * 2;
+            this.type = Math.random() < 0.45 ? 'heart' : 'star'; // More love symbols
         }
         update() {
             this.y += this.speedY;
@@ -267,16 +268,27 @@ if (canvas) {
         }
         draw() {
             ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(229, 196, 151, ${Math.max(0, Math.min(this.opacity, 0.95))})`;
-            ctx.shadowBlur = this.size * 2.5;
-            ctx.shadowColor = '#e5c497';
-            ctx.fill();
+            ctx.fillStyle = `rgba(223, 177, 91, ${Math.max(0, Math.min(this.opacity, 0.98))})`;
+            ctx.shadowBlur = this.size * 4.8; // Stronger gold glow shadow
+            ctx.shadowColor = '#dfb15b';
+            
+            if (this.type === 'heart') {
+                const size = this.size * 1.4 + 0.8; // Scale hearts to be smaller and more delicate
+                const topY = this.y - size * 0.35;
+                ctx.moveTo(this.x, topY);
+                ctx.bezierCurveTo(this.x - size / 2, topY - size / 2, this.x - size, topY + size / 3, this.x, topY + size);
+                ctx.bezierCurveTo(this.x + size, topY + size / 3, this.x + size / 2, topY - size / 2, this.x, topY);
+                ctx.closePath();
+                ctx.fill();
+            } else {
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
         }
     }
 
-    // Spawn 180 cosmic stars
-    const starCount = isTouchDevice ? 80 : 180;
+    // Spawn 260 cosmic stars for a richer gold backdrop
+    const starCount = isTouchDevice ? 120 : 260;
     for (let i = 0; i < starCount; i++) {
         stars.push(new Star());
     }
@@ -301,12 +313,12 @@ if (canvas) {
                 const dist = Math.sqrt(dx * dx + dy * dy);
 
                 if (dist < maxDistance) {
-                    const alpha = (1 - (dist / maxDistance)) * 0.28;
+                    const alpha = (1 - (dist / maxDistance)) * 0.42; // Brighter gold connections
                     ctx.beginPath();
                     ctx.moveTo(s1.x, s1.y);
                     ctx.lineTo(s2.x, s2.y);
-                    ctx.strokeStyle = `rgba(229, 196, 151, ${alpha})`;
-                    ctx.lineWidth = 0.7;
+                    ctx.strokeStyle = `rgba(223, 177, 91, ${alpha})`;
+                    ctx.lineWidth = 0.75;
                     ctx.stroke();
                 }
             }
@@ -318,12 +330,12 @@ if (canvas) {
                 const dy = state.mouse.y - s.y;
                 const dist = Math.sqrt(dx * dx + dy * dy);
                 if (dist < maxDistance * 1.35) {
-                    const alpha = (1 - (dist / (maxDistance * 1.35))) * 0.38;
+                    const alpha = (1 - (dist / (maxDistance * 1.35))) * 0.52; // Brighter mouse connection lines
                     ctx.beginPath();
                     ctx.moveTo(s.x, s.y);
                     ctx.lineTo(state.mouse.x, state.mouse.y);
-                    ctx.strokeStyle = `rgba(229, 196, 151, ${alpha})`;
-                    ctx.lineWidth = 0.8;
+                    ctx.strokeStyle = `rgba(223, 177, 91, ${alpha})`;
+                    ctx.lineWidth = 0.85;
                     ctx.stroke();
                 }
             }
