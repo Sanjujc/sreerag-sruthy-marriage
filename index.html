@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sreerag & Reshma (Sruthy) | Wedding Invitation</title>
+    <!-- SEO and Social Sharing Tags -->
+    <meta property="og:title" content="Sreerag & Reshma (Sruthy) | Wedding Invitation">
+    <meta property="og:description"
+        content="Together with our families, we warmly invite you to join us in celebrating and blessing the wedding of Sreerag & Reshma (Sruthy).">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=1200">
+    <!-- Google Fonts: Cormorant Garamond & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Montserrat:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=2">
+</head>
+
+<body>
+    <!-- Door Opening Intro Overlay -->
+    <div class="intro-overlay" id="introOverlay">
+        <div class="door left-door">
+            <div class="door-ornament left-ornament"></div>
+        </div>
+        <div class="door right-door">
+            <div class="door-ornament right-ornament"></div>
+        </div>
+        <div class="door-seal" id="enterBtn">
+            <div class="seal-inner">
+                <span class="seal-monogram">S&amp;R</span>
+                <span class="seal-prompt">Tap to Unveil</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor Trails -->
+    <div class="cursor-trail"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- Ambient Glowing Backgrounds -->
+    <div class="ambient-bg"></div>
+    <!-- Interactive Constellation Engine Canvas -->
+    <canvas id="constellationCanvas"
+        style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;"></canvas>
+
+    <!-- Floating Pill Navigation Header -->
+    <nav class="navbar">
+        <div class="nav-logo fade-up">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="19" stroke="rgba(229, 196, 151, 0.4)" stroke-width="1" />
+                <path d="M12 28 C 12 18, 28 18, 28 28" stroke="rgba(229, 196, 151, 0.3)" stroke-width="1" />
+                <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle"
+                    font-family="Cormorant Garamond, serif" font-size="15" font-style="normal"
+                    fill="#e5c497">S&amp;R</text>
+            </svg>
+            <div class="nav-logo-text">
+                <span class="nav-logo-names">Sreerag &amp; Reshma</span>
+                <span class="nav-logo-date">27 August 2026</span>
+            </div>
+        </div>
+        <ul class="nav-links fade-up">
+            <li><a href="#hero" class="magnetic-item">Home</a></li>
+            <li><a href="#invitation" class="magnetic-item">Invitation</a></li>
+            <li><a href="#events" class="magnetic-item">Ceremonies</a></li>
+            <li><a href="#rsvp" class="magnetic-item">RSVP</a></li>
+        </ul>
+        <div class="audio-control magnetic-item fade-up" id="audioToggle">
+            <!-- Play icon default -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path
+                    d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z">
+                </path>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+        </div>
+        <audio id="bgMusic" loop preload="auto" muted autoplay>
+            <source src="audio/Jashn%20E%20Bahaaraa%20Instrumental%20Flute%20Jodhaa%20Akbar%20320%20Kbps.mp3"
+                type="audio/mpeg">
+        </audio>
+    </nav>
+
+    <!-- Hero Greeting Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <!-- Cathedral Monogram Frame -->
+            <div class="arch-hero-frame fade-up">
+                <div class="hero-monogram">S&amp;R</div>
+                <h1 class="hero-names">Sreerag S<br><span class="ampersand">&amp;</span><br>Reshma R</h1>
+                <p style="font-size: 0.8rem; letter-spacing: 3px; text-transform: uppercase; color: var(--text-muted); margin-top: 0.6rem;">(Sruthy)</p>
+            </div>
+            
+            <p class="hero-tagline fade-up">Two Stars, One Constellation</p>
+            
+            <div class="scroll-indicator">
+                <div class="arrows">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e5c497" stroke-width="1.5">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+                <span>Scroll Down</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Timer Element -->
+    <countdown-timer target-date="2026-08-27T10:00:00"></countdown-timer>
+
+    <!-- Arched Formal Invitation Letter -->
+    <section id="invitation" class="container section-padding">
+        <div class="invitation-block fade-up">
+            <h2 class="invitation-title">Wedding Invitation</h2>
+
+            <div class="invitation-text">
+                <!-- Bride's Parents -->
+                <span style="font-family: var(--font-heading); font-size: 1.85rem; color: var(--accent-color); letter-spacing: 1.5px; font-weight: 300;">
+                    Somasekharan Nair &amp; Rajalekshmi R
+                </span><br>
+                <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 3px; display: block; margin-top: 0.4rem; line-height: 1.8; font-weight: 400;">
+                    TC 23/623 KNRWA : 174 Bindhu Bhavan Valiyasalai, Thiruvananthapuram<br>
+                    Phone: 9895883145, 9895887481
+                </span>
+
+                <div style="margin: 3.5rem 0;">
+                    <span class="invitation-quote">
+                        "With hearts full of joy, we warmly invite you to join us in celebrating and blessing the wedding of our beloved daughter."
+                    </span>
+                </div>
+
+                <!-- Bride Name and Info -->
+                <span class="invitation-names" style="color: var(--accent-color);">Reshma R</span>
+                <span style="font-size: 1rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 4px; display: block; margin-top: -0.2rem; font-weight: 400;">(Sruthy)</span>
+                
+                <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 3px; display: block; margin: 1.2rem 0 2rem 0; line-height: 1.7; font-weight: 400;">
+                    Granddaughter of Mr. Neelakanda Panicker &amp; Mrs. Krishnamma<br>
+                    (Late Mr. Nataraja Pillai &amp; Mrs. Rajamma)
+                </span>
+
+                <span style="font-family: var(--font-heading); font-style: italic; color: var(--accent-color); font-size: 1.8rem; display: block; margin: 1.5rem 0;">with</span>
+
+                <!-- Groom Name and Info -->
+                <span class="invitation-names">Sreerag S</span>
+                <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 3px; display: block; margin: 1.2rem 0 3.5rem 0; line-height: 1.7; font-weight: 400;">
+                    Son of Sreekumar K &amp; Sheeja Kumari PR<br>
+                    Paramukalil Puthenveedu Kaithodu, Nilamel
+                </span>
+
+                <div style="width: 40px; height: 1px; background: var(--accent-color); margin: 0 auto 2.5rem auto; opacity: 0.3;"></div>
+
+                <span class="compliments-title">Sharing Happiness:</span>
+                <span class="compliments-names">Rahul Sekhar &amp; Sumitha RS</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Details/Events Arched Cards Section -->
+    <section id="events" class="events section-padding" style="background-color: var(--bg-secondary); position: relative; z-index: 10;">
+        <div class="container">
+            <h2 class="section-title fade-up">The Ceremonies</h2>
+            
+            <p class="fade-up" style="text-align: center; color: var(--accent-color); letter-spacing: 4px; font-size: 0.8rem; text-transform: uppercase; margin: -2.5rem 0 4rem 0;">
+                Thursday, 27 August 2026 &nbsp;|&nbsp; 28 Chingam 1202
+            </p>
+
+            <div class="events-grid">
+                <!-- Thalikettu Ceremony Card (Cathedral Arch) -->
+                <div class="event-card fade-up">
+                    <span class="event-type">The Thalikettu</span>
+                    <h3 class="event-date">10:00 AM</h3>
+
+                    <div style="width: 40px; height: 1px; background: var(--accent-color); margin: 0 auto 2rem auto; opacity: 0.4;"></div>
+
+                    <p class="event-time">Morning Rituals</p>
+                    <p class="event-location">
+                        <span class="venue-name">Attukal Temple</span><br>
+                        Manacaud P.O.<br>
+                        Thiruvananthapuram
+                    </p>
+
+                    <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 3rem;">
+                        <a id="saveThalikettuBtn" href="javascript:void(0);" class="btn-outline magnetic-item"
+                            style="margin-top: 0; padding: 0.8rem 1.8rem; font-size: 0.75rem;">Save Event</a>
+                        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Attukal+Bhagavathy+Temple+Thiruvananthapuram"
+                            class="btn-outline magnetic-item" style="margin-top: 0; padding: 0.8rem 1.8rem; font-size: 0.75rem;">Get Directions</a>
+                    </div>
+                </div>
+
+                <!-- Wedding Reception Card (Cathedral Arch) -->
+                <div class="event-card fade-up">
+                    <span class="event-type">Sweekaranam &amp; Muhurtham</span>
+                    <h3 class="event-date">10:45 AM</h3>
+
+                    <div style="width: 40px; height: 1px; background: var(--accent-color); margin: 0 auto 2rem auto; opacity: 0.4;"></div>
+
+                    <p class="event-time">Between 10:45 AM - 11:30 AM</p>
+                    <p class="event-location">
+                        <span class="venue-name">Mount Carmel Convention Center</span><br>
+                        Vazhuthacaud<br>
+                        Thiruvananthapuram
+                    </p>
+
+                    <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 3rem;">
+                        <a id="saveReceptionBtn" href="javascript:void(0);" class="btn-outline magnetic-item"
+                            style="margin-top: 0; padding: 0.8rem 1.8rem; font-size: 0.75rem;">Save Event</a>
+                        <a target="_blank" href="https://www.google.com/maps/search/Mount+Carmel+Convention+Centre+Vazhuthacaud+Trivandrum"
+                            class="btn-outline magnetic-item" style="margin-top: 0; padding: 0.8rem 1.8rem; font-size: 0.75rem;">Get Directions</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Premium framed announcement note -->
+            <div class="announcement-frame fade-up">
+                <p style="font-family: var(--font-heading); font-size: 1.25rem; letter-spacing: 2px; color: var(--accent-color); font-style: italic; font-weight: 300;">
+                    Kindly Note: There will be no reception on the previous day.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Custom Web Component -->
+    <rsvp-form></rsvp-form>
+
+    <!-- Footer -->
+    <footer>
+        <p class="fade-up">Celestial. Elegant. Eternal.</p>
+    </footer>
+
+    <!-- Web Components Script Loading -->
+    <script src="components/countdown.js" defer></script>
+    <script src="components/rsvp.js" defer></script>
+    <!-- Main Script Loading -->
+    <script src="script.js" defer></script>
+</body>
+
+</html>
