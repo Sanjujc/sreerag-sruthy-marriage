@@ -94,10 +94,10 @@ class CountdownTimer extends HTMLElement {
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
         const dEl = this.querySelector('#cd-days'); const hEl = this.querySelector('#cd-hours');
         const mEl = this.querySelector('#cd-mins'); const sEl = this.querySelector('#cd-secs');
-        if(dEl) dEl.innerText = days < 10 ? '0'+days : days;
-        if(hEl) hEl.innerText = hours < 10 ? '0'+hours : hours;
-        if(mEl) mEl.innerText = minutes < 10 ? '0'+minutes : minutes;
-        if(sEl) sEl.innerText = seconds < 10 ? '0'+seconds : seconds;
+        if (dEl) dEl.innerText = days < 10 ? '0' + days : days;
+        if (hEl) hEl.innerText = hours < 10 ? '0' + hours : hours;
+        if (mEl) mEl.innerText = minutes < 10 ? '0' + minutes : minutes;
+        if (sEl) sEl.innerText = seconds < 10 ? '0' + seconds : seconds;
     }
 }
 customElements.define('countdown-timer', CountdownTimer);
