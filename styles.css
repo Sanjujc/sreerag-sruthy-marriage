@@ -252,9 +252,10 @@ body {
     margin-bottom: 4rem;
     font-weight: 300;
     letter-spacing: 2px;
-    background: linear-gradient(135deg, #fff3d1 10%, #dfb15b 50%, #a37b32 100%);
+    background: linear-gradient(135deg, #b88728 0%, #fef1c9 30%, #936515 70%, #644306 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.4));
 }
 
 .section-title::after {
@@ -335,9 +336,10 @@ body {
     line-height: 1.35;
     letter-spacing: 5px;
     text-transform: uppercase;
-    background: linear-gradient(135deg, #fff3d1 10%, #dfb15b 55%, #a37b32 100%);
+    background: linear-gradient(135deg, #b88728 0%, #fef1c9 30%, #936515 70%, #644306 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.5));
     margin-bottom: 0.5rem;
 }
 
@@ -696,6 +698,11 @@ footer::before {
         font-size: 2.5rem;
         letter-spacing: 3px;
         line-height: 1.35;
+        font-weight: 400;
+        background: linear-gradient(135deg, #b88728 0%, #fef1c9 30%, #936515 70%, #644306 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.8));
     }
 
     .hero-nickname {
